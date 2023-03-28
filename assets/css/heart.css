@@ -1,0 +1,31 @@
+.heart {
+  background-color: var(--heart);
+  display: inline-block;
+  height: 10px;
+  margin: 0 65px;
+  position: relative;
+  top: -19px;
+  transform: rotate(-45deg);
+  width: 10px;
+  z-index: 3;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: var(--heart);
+  border-radius: 50%;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+}
+
+.heart:before {
+  top: -6px;
+  left: 0;
+}
+
+.heart:after {
+  left: 6px;
+  top: 0;
+}

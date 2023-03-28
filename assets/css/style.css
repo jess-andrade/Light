@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root {
+  --dark: rgb(52, 51, 52);
+  --dark2: rgb(28, 28, 28);
+  --background: rgb(24, 23, 23);
+  --heart: rgb(213, 35, 29);
+  --heart2: rgb(196, 10, 10);
+
+  --light: #d8dbe0;
+  --dark3: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+* {
+  margin: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  font-family: 'Tilt Neon', cursive;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+body.on {
+  background: radial-gradient(#878686, black);
+}
+
+p {
+  color: var(--background);
+  font-size: 10px;
+  width: 150px;
+}

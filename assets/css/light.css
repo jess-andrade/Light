@@ -1,0 +1,93 @@
+.bulb {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: var(--dark);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+body.on .bulb {
+  background: white;
+  box-shadow: 0 0 50px white,
+    0 0 50px white,
+    0 0 100px white,
+    0 0 150px white,
+    0 0 200px white,
+    0 0 250px white,
+    0 0 300px white,
+}
+
+.bulb::before {
+  content: '';
+  position: absolute;
+  left: 22.5px;
+  top: -50px;
+  width: 35px;
+  height: 80px;
+  background: var(--dark);
+  border-top: 30px solid black;
+  border-radius: 10px;
+}
+
+body.on .bulb::before {
+  background: white;
+}
+
+body.on .bulb::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  filter: blur(40px);
+
+}
+
+.bulb span:nth-child(1) {
+  position: absolute;
+  top: -16px;
+  left: -3.7px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  transform: rotate(342deg);
+  border-bottom-right-radius: 40px;
+  box-shadow: 20px 20px 0 10px var(--dark);
+}
+
+body.on .bulb span:nth-child(1) {
+  box-shadow: 20px 20px 0 10px white;
+}
+
+.bulb span:nth-child(2) {
+  position: absolute;
+  top: -16px;
+  left: 53.7px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  transform: rotate(17deg);
+  border-bottom-left-radius: 40px;
+  box-shadow: -20px 20px 0 10px var(--dark);
+}
+
+body.on .bulb span:nth-child(2) {
+  box-shadow: -20px 20px 0 10px white;
+}
+
+.wire {
+  position: relative;
+  left: calc(35% - 12px);
+  bottom: 50%;
+  width: 4px;
+  height: 60vh;
+  background: black;
+  z-index: 1;
+}
